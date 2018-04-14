@@ -32,4 +32,25 @@ public class OrdArray {
             }
         }
     }
+
+    public boolean delete( long value ) {
+        int j = find(value);
+        if ( j == nElems ) {
+            return false;
+        } else {
+            for ( int k = j; k < nElems; k++ ) {
+                a[k] = a[k + 1];
+            }
+            nElems--;
+            return true;
+        }
+    }
+
+    public void display( ) {
+        for ( int j = 0; j < nElems; j++ ) {
+            System.out.println( a[j] + " ");
+        }
+
+        System.out.println(" ");
+    }
 }
