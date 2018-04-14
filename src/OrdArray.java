@@ -43,9 +43,10 @@ public class OrdArray {
             }
         }
 
-        for ( int k = j; k < nElems; k++ ) {
+        for ( int k = nElems; k > j; k-- ) {
             a[k] = a[k - 1];
         }
+
         a[j] = value;
         nElems++;
 
@@ -66,7 +67,7 @@ public class OrdArray {
 
     public void display( ) {
         for ( int j = 0; j < nElems; j++ ) {
-            System.out.println( a[j] + " ");
+            System.out.print( a[j] + " ");
         }
 
         System.out.println(" ");
